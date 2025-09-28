@@ -53,3 +53,6 @@ Route::post('/artworks/{id}/update',[ArtworkController::class, "update"])->name(
 // affdsfgit 
 ######
 //DDDDDDDDDDDDDWA
+
+//fasdfjkdsajfklsa
+//fsdfas
