@@ -37,6 +37,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
 Route::get('/exhibition', [exhibitionController::class, "index"]);
 
 Route::get('/artworks',[ArtworkController::class, "index"])->name("artworks");
@@ -46,3 +47,7 @@ Route::post('/artworks/insert',[ArtworkController::class, "insert"])->name("artw
 Route::get('/artworks/{id}/edit',[ArtworkController::class, "edit"])->name("artworks.edit");
 
 Route::post('/artworks/{id}/update',[ArtworkController::class, "update"])->name("artworks.update");
+
+
+// dfdajflfja;
+// affdsfgit 
