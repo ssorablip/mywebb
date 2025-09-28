@@ -35,8 +35,20 @@ class ArtworkController extends Controller
     $artists = artists::all();
     $exhibitions = exhibition::all();
 
-    return view('artworks', compact('artwork', 'artists', 'exhibitions'));
-}   
+    $artworks = artworks::all();
 
+        return view('artworks', compact('artwork', 'artists', 'exhibitions', 'artworks'));
+}   
+ public function update(Request $request, $id)
+    {
+        $artwork = artworks::findOrFail($id);
+        $artwork->update([
+            "title" => $request->input('title'),
+            "artist_id" => $request->input('artist_id'),
+            "exhibition_id" => $request->input('exhibition_id'),
+        ]);
+
+        return redirect()->route('artworks')->with('success', 'แก้ไขข้อมูลผลงานเรียบร้อยแล้ว');
+    }
 
 }
